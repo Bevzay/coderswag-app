@@ -28,22 +28,22 @@
                                 <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2x3-LG-wOc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2x3-LG-wOc">
                                 <rect key="frame" x="0.0" y="68" width="375" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="Hmw-Xx-It8" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="132"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="86" id="Hmw-Xx-It8" customClass="CategoryCell" customModule="coder_swag" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="86"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hmw-Xx-It8" id="whE-dD-oKS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-k1-4eu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="131.5"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="79.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOODIES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8j-gq-OXp">
-                                                    <rect key="frame" x="128" y="55.5" width="119" height="21"/>
+                                                    <rect key="frame" x="128" y="32.5" width="119" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="YGQ-fr-l2l"/>
                                                         <constraint firstAttribute="width" constant="119" id="ebw-w8-3Ck"/>
@@ -54,17 +54,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jBP-k1-4eu" secondAttribute="bottom" constant="3" id="0Nu-Sw-LWQ"/>
                                                 <constraint firstItem="jBP-k1-4eu" firstAttribute="leading" secondItem="whE-dD-oKS" secondAttribute="leading" id="1n7-pG-axH"/>
-                                                <constraint firstItem="jBP-k1-4eu" firstAttribute="top" secondItem="whE-dD-oKS" secondAttribute="top" id="CDV-Ys-Vol"/>
+                                                <constraint firstItem="jBP-k1-4eu" firstAttribute="top" secondItem="whE-dD-oKS" secondAttribute="top" constant="3" id="6B4-qg-Afk"/>
                                                 <constraint firstItem="v8j-gq-OXp" firstAttribute="centerX" secondItem="whE-dD-oKS" secondAttribute="centerX" id="DZG-xd-qtD"/>
-                                                <constraint firstAttribute="bottom" secondItem="jBP-k1-4eu" secondAttribute="bottom" id="MFb-7c-jKk"/>
                                                 <constraint firstItem="v8j-gq-OXp" firstAttribute="centerY" secondItem="whE-dD-oKS" secondAttribute="centerY" id="WT1-RV-PJk"/>
                                                 <constraint firstAttribute="trailing" secondItem="jBP-k1-4eu" secondAttribute="trailing" id="w9d-qF-hcJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="categoryImage" destination="jBP-k1-4eu" id="ILk-TW-2mr"/>
-                                            <outlet property="categoryTitle" destination="v8j-gq-OXp" id="cP6-sa-k0I"/>
+                                            <outlet property="categoryImage" destination="jBP-k1-4eu" id="1YP-JA-4Ty"/>
+                                            <outlet property="categoryTitle" destination="v8j-gq-OXp" id="qbj-qy-130"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
