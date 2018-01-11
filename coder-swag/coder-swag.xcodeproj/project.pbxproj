@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D6061B982006CDDE00C4BE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6061B972006CDDE00C4BE9E /* AppDelegate.swift */; };
-		D6061B9A2006CDDE00C4BE9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6061B992006CDDE00C4BE9E /* ViewController.swift */; };
+		D6061B9A2006CDDE00C4BE9E /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6061B992006CDDE00C4BE9E /* CategoriesVC.swift */; };
 		D6061B9D2006CDDE00C4BE9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6061B9B2006CDDE00C4BE9E /* Main.storyboard */; };
 		D6061B9F2006CDDE00C4BE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6061B9E2006CDDE00C4BE9E /* Assets.xcassets */; };
 		D6061BA22006CDDE00C4BE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6061BA02006CDDE00C4BE9E /* LaunchScreen.storyboard */; };
+		D6061BAF2006EFB500C4BE9E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6061BAE2006EFB500C4BE9E /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6061B942006CDDE00C4BE9E /* coder-swag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "coder-swag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6061B972006CDDE00C4BE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6061B992006CDDE00C4BE9E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6061B992006CDDE00C4BE9E /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		D6061B9C2006CDDE00C4BE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6061B9E2006CDDE00C4BE9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6061BA12006CDDE00C4BE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6061BA32006CDDE00C4BE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6061BAE2006EFB500C4BE9E /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,39 @@
 		D6061B962006CDDE00C4BE9E /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				D6061BAB2006ED7000C4BE9E /* View */,
+				D6061BAA2006E71800C4BE9E /* Model */,
+				D6061BA92006E70B00C4BE9E /* Controller */,
 				D6061B972006CDDE00C4BE9E /* AppDelegate.swift */,
-				D6061B992006CDDE00C4BE9E /* ViewController.swift */,
 				D6061B9B2006CDDE00C4BE9E /* Main.storyboard */,
 				D6061B9E2006CDDE00C4BE9E /* Assets.xcassets */,
 				D6061BA02006CDDE00C4BE9E /* LaunchScreen.storyboard */,
 				D6061BA32006CDDE00C4BE9E /* Info.plist */,
 			);
 			path = "coder-swag";
+			sourceTree = "<group>";
+		};
+		D6061BA92006E70B00C4BE9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6061B992006CDDE00C4BE9E /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D6061BAA2006E71800C4BE9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6061BAB2006ED7000C4BE9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6061BAE2006EFB500C4BE9E /* CategoryCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +123,7 @@
 				TargetAttributes = {
 					D6061B932006CDDE00C4BE9E = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -136,8 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6061B9A2006CDDE00C4BE9E /* ViewController.swift in Sources */,
+				D6061B9A2006CDDE00C4BE9E /* CategoriesVC.swift in Sources */,
 				D6061B982006CDDE00C4BE9E /* AppDelegate.swift in Sources */,
+				D6061BAF2006EFB500C4BE9E /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,11 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "coder-swag/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makeapple.coder-swag";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +318,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "coder-swag/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.makeapple.coder-swag";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
